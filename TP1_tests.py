@@ -1,7 +1,9 @@
-import TP1_template as TP
+import sys, os
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+import exercice_1 as TP
 import nose2
 import unittest
-import sys, io
+import io
 from contextlib import redirect_stdout
 
 class Test_Exercice1_Binomes(unittest.TestCase):
@@ -10,8 +12,8 @@ class Test_Exercice1_Binomes(unittest.TestCase):
         self.assertEqual(TP.binome(10, 5), 252)
 
     def test_calcul_binomial_efficace(self):
-        self.assertEqual(TP.binome_efficace(5, 2), 10)
-        self.assertEqual(TP.binome_efficace(10, 5), 252)
+        self.assertEqual(TP.binomeEfficace(5, 2), 10)
+        self.assertEqual(TP.binomeEfficace(10, 5), 252)
 
 class Test_Exercice2_ManipSurNombres(unittest.TestCase):
     def test_nombre_de_chiffres(self):
@@ -69,13 +71,13 @@ class Test_Exercice4_RechercheDansUneListe(unittest.TestCase):
 
     def test_recherche_dichotomique(self):
         arr = [0, 2, 8, 16, 32, 33, 33, 100, 125, 455]
-        self.assertEqual(TP.rechercheDico(arr, 0, len(arr), 100), 7)
-        self.assertEqual(TP.rechercheDico(arr, 0, len(arr), 125), 8)
+        self.assertEqual(TP.rechercheDicho(arr, 0, len(arr), 100), 7)
+        self.assertEqual(TP.rechercheDicho(arr, 0, len(arr), 125), 8)
 
     def test_recherche_trichotomique(self):
         arr = [0, 2, 8, 16, 32, 33, 33, 100, 125, 455]
-        self.assertEqual(TP.rechercheTrico(arr, 0, len(arr), 100), 7)
-        self.assertEqual(TP.rechercheTrico(arr, 0, len(arr), 125), 8)
+        self.assertEqual(TP.rechercheTricho(arr, 0, len(arr), 100), 7)
+        self.assertEqual(TP.rechercheTricho(arr, 0, len(arr), 125), 8)
 
 
 if __name__ == "__main__":

@@ -3,7 +3,7 @@
 def binome(n, p):
     pass
 
-def binome_efficace(n, p):
+def binomeEfficace(n, p):
     pass
 
 # Exercice 2:
@@ -39,8 +39,8 @@ def syracus_with_while():
 def rechercheSequentielle(arr, n, x):
     pass
 
-def rechercheDico(arr, debut, fin, x):
+def rechercheDicho(arr, debut, fin, x):
     pass
 
-def rechercheTrico(arr, l, r, x):
+def rechercheTricho(arr, l, r, x):
     pass
